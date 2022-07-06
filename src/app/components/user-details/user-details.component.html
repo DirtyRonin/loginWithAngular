@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="container-item">
+    <img class="large-image center" src="{{ user.picture.large }}" />
+  </div>
+  <div class="container-item">
+      <div class="user-details">
+        <h4>First Name</h4>
+        <h4>{{ user.name.first }}</h4>
+        <h4>Last Name</h4>
+        <h4>{{ user.name.last }}</h4>
+        <h4>Email</h4>
+        <h4>{{ user.email }}</h4>
+        <h4>Date of Birth</h4>
+        <h4>{{ user.dob.date | date: "dd.MM.yyyy" }}</h4>
+        <h4>Age</h4>
+        <h4>{{ user.dob.age }}</h4>
+        <h4>Gender</h4>
+        <h4>{{ user.gender }}</h4>
+      </div>
+      <div class="container-item align-right">
+        <div></div>
+        <app-logout-button
+        (onLogout)="logout()"></app-logout-button>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="logo-container center">
+    <img class="logo" src="../../../assets/globus-large.png" />
+  </div>
+  <form class="login-form" (ngSubmit)="onSubmit()">
+    <div class="form-control center">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        name="text"
+        id="text"
+        [(ngModel)]="email"
+        placeholder="please insert your email"
+      />
+    </div>
+    <div class="form-control">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        name="day"
+        id="day"
+        [(ngModel)]="password"
+        placeholder="please insert your password"
+      />
+    </div>
+    <input type="submit" value="Login" class="btn btn-block" />
+    
+    <p [hidden]="IsHidden()" class="error-message"><fa-icon [ngStyle]="{'color':'red' , 'margin-right':'10px'}" [icon]="icon"></fa-icon>{{ auth.message }}</p>
+  </form>
+</div>

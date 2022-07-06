@@ -1,0 +1,11 @@
+<div *ngIf="auth?.IsAuthenticated === false; else showUserDetails">
+  <app-login
+  [auth]="auth"
+  ></app-login>
+</div>
+<ng-template #showUserDetails>
+  <app-user-details
+  [user]="currentUser"
+  (onLogout)="logout()"
+  ></app-user-details>
+</ng-template>
